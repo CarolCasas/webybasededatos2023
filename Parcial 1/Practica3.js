@@ -2,6 +2,7 @@ $(document).ready(function () {
     var carta1 = ""; var carta2 = "";
     var par = false;
     var total_pares = 0;
+    var total_intnetos = 0;
     $('img').click(function (e) {
         var estado = $(this).attr('data-estado')
         var nombre_imagen = $(this).attr('data-id')
@@ -40,8 +41,28 @@ $(document).ready(function () {
                 par = true
                 total_pares++
                 $("#total_pares").html(total_pares)
+            } else {
+                total_intnetos++
             }
         }
+
+        if(total_intnetos >= 5){
+                alert("Excediste el número de intentos permitidos")
+                alert("Has perdido el juego :( , vuelve a intentarlo de nuevo")
+                $('img').each(function (){
+                    $(this).attr('src', 'cara1.jpg')
+                    $(this).attr('data-estado', '0')
+                });
+                total_pares = 0
+                total_intnetos = 0
+                $("#total_pares").html(total_pares)
+                par = false
+                carta1 = ""
+                carta2 = ""
+                return;
+            
+        }
+
         if(total_pares == 8){
             $('img').each(function () {
                 $(this).attr('src', 'cara1.jpg')
