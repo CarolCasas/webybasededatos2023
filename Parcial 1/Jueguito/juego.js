@@ -25,10 +25,17 @@ $(document).ready(function (){
       //validacion piedra
       if(valor_cpu == 1){
         console.log("Empate");
+        $("#empate").css("display", "block");
        } else if(valor_cpu <= 2){
         console.log("gana papel");
+        contador_cpu++
+        $("#empate").css("display", "none");
+        $("#contador_cpu").html(contador_cpu)
        } else {
         console.log("gana piedra");
+        contador_jugador++
+        $("#empate").css("display", "none");
+        $("#contador_jugador").html(contador_jugador)
        } 
     });
 
@@ -54,10 +61,17 @@ $(document).ready(function (){
     //validacion papel
     if(valor_cpu == 2){
         console.log("Empate");
+        $("#empate").css("display", "block");
        } else if(valor_cpu <= 2){
         console.log("gana papel");
+        contador_jugador++
+        $("#empate").css("display", "none");
+        $("#contador_jugador").html(contador_jugador)
        } else {
         console.log("gana tijere");
+        contador_cpu++
+        $("#empate").css("display", "none");
+        $("#contador_cpu").html(contador_cpu)
        } 
     });
 
@@ -83,11 +97,25 @@ $(document).ready(function (){
         //validacion tijere
     if(valor_cpu == 3){
         console.log("Empate");
-       } else if(valor_cpu <= 2){
+        $("#empate").css("display", "block");
+       } else if(valor_cpu >= 2){
         console.log("gana tijere");
+        contador_jugador++
+        $("#empate").css("display", "none");
+        $("#contador_jugador").html(contador_jugador)
        } else {
-        console.log("gana piedre");
+        console.log("gana piedra");
+        contador_cpu++
+        $("#empate").css("display", "none");
+        $("#contador_cpu").html(contador_cpu)
        } 
      });
+
+     if(contador_cpu==3){
+        alert("GANA LA PTA");
+     }else if(contador_jugador){
+        alert("GANA TUMAMA");
+     }
+
 
 });
