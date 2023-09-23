@@ -6,7 +6,7 @@ $(document).ready(function (){
     $("#boton_piedra").click(function (e) {
         //console.log("si")
         var opcion = $(this).attr("data-id")
-       // console.log(opcion) 
+       // console.log(opcion)
         if(opcion=="piedra"){
             valor_cpu = Math.floor(Math.random()*3+1);
             if(valor_cpu == 1){
@@ -20,6 +20,14 @@ $(document).ready(function (){
                     console.log(valor_cpu);
                 }
             $("#jugador").attr("src", "piedra_espejo.png")
+            if(contador_cpu > 2 || contador_jugador > 2){
+                alert("Gana compu")
+                console.log("Juego finalizado");
+                $("#boton_papel").prop("disabled", true);
+                $("#boton_piedra").prop("disabled", true);
+                $("#boton_tijera").prop("disabled", true);
+    
+             }
         } 
         
       //validacion piedra
@@ -56,6 +64,14 @@ $(document).ready(function (){
                 console.log(valor_cpu);
             }
         $("#jugador").attr("src", "papel_espejo.png")
+        if(contador_cpu > 2 || contador_jugador > 2){
+            alert("Gana compu")
+            console.log("Juego finalizado");
+            $("#boton_papel").prop("disabled", true);
+            $("#boton_piedra").prop("disabled", true);
+            $("#boton_tijera").prop("disabled", true);
+
+         }
     } 
     
     //validacion papel
@@ -92,6 +108,14 @@ $(document).ready(function (){
                     console.log(valor_cpu);
                 }
             $("#jugador").attr("src", "tijera_espejo.png")
+            if(contador_cpu > 2 || contador_jugador > 2){
+                alert("Gana compu")
+                console.log("Juego finalizado");
+                $("#boton_papel").prop("disabled", true);
+                $("#boton_piedra").prop("disabled", true);
+                $("#boton_tijera").prop("disabled", true);
+    
+             }
         }     
         
         //validacion tijere
@@ -111,11 +135,22 @@ $(document).ready(function (){
        } 
      });
 
-     if(contador_cpu==3){
-        alert("GANA LA PTA");
-     }else if(contador_jugador){
-        alert("GANA TUMAMA");
+
+
+            
+    /*if(contador_cpu == 3){
+        alert("Gana compu")
+        console.log("Juego finalizado");
+        contador_cpu = 0;
+        contador_jugador = 0;
+     }else if(contador_jugador == 3){
+        alert("Ganan jugador")
+        console.log("Juego finalizado");
+        contador_cpu = 0;
+        contador_jugador = 0;
      }
+     */
+
 
 
 });
