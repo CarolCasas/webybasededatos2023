@@ -20,14 +20,24 @@ $(document).ready(function (){
                     console.log(valor_cpu);
                 }
             $("#jugador").attr("src", "piedra_espejo.png")
-            if(contador_cpu > 2 || contador_jugador > 2){
-                alert("Gana compu")
-                console.log("Juego finalizado");
+            if(contador_cpu > 2){
+                alert("GANA LA COMPUTADORA")
+                console.log("JUEGO FINALIZADO");
                 $("#boton_papel").prop("disabled", true);
                 $("#boton_piedra").prop("disabled", true);
                 $("#boton_tijera").prop("disabled", true);
+                $("#Refresh").css("display", "block");
     
-             }
+            }
+            if(contador_jugador > 2){
+                alert("GANA EL JUGADOR")
+                console.log("JUEGO FINALIZADO");
+                $("#boton_papel").prop("disabled", true);
+                $("#boton_piedra").prop("disabled", true);
+                $("#boton_tijera").prop("disabled", true);
+                $("#Refresh").css("display", "block");
+    
+            }
         } 
         
       //validacion piedra
@@ -64,14 +74,24 @@ $(document).ready(function (){
                 console.log(valor_cpu);
             }
         $("#jugador").attr("src", "papel_espejo.png")
-        if(contador_cpu > 2 || contador_jugador > 2){
-            alert("Gana compu")
-            console.log("Juego finalizado");
+        if(contador_cpu > 2){
+            alert("GANA LA COMPUTADORA")
+            console.log("JUEGO FINALIZADO");
             $("#boton_papel").prop("disabled", true);
             $("#boton_piedra").prop("disabled", true);
             $("#boton_tijera").prop("disabled", true);
+            $("#Refresh").css("display", "block");
 
-         }
+        }
+        if(contador_jugador > 2){
+            alert("GANA EL JUGADOR")
+            console.log("JUEGO FINALIZADO");
+            $("#boton_papel").prop("disabled", true);
+            $("#boton_piedra").prop("disabled", true);
+            $("#boton_tijera").prop("disabled", true);
+            $("#Refresh").css("display", "block");
+
+        }
     } 
     
     //validacion papel
@@ -108,14 +128,24 @@ $(document).ready(function (){
                     console.log(valor_cpu);
                 }
             $("#jugador").attr("src", "tijera_espejo.png")
-            if(contador_cpu > 2 || contador_jugador > 2){
-                alert("Gana compu")
-                console.log("Juego finalizado");
+            if(contador_cpu > 2){
+                alert("GANA LA COMPUTADORA")
+                console.log("JUEGO FINALIZADO");
                 $("#boton_papel").prop("disabled", true);
                 $("#boton_piedra").prop("disabled", true);
                 $("#boton_tijera").prop("disabled", true);
+                $("#Refresh").css("display", "block");
     
-             }
+            }
+            if(contador_jugador > 2){
+                alert("GANA EL JUGADOR")
+                console.log("JUEGO FINALIZADO");
+                $("#boton_papel").prop("disabled", true);
+                $("#boton_piedra").prop("disabled", true);
+                $("#boton_tijera").prop("disabled", true);
+                $("#Refresh").css("display", "block");
+    
+            }
         }     
         
         //validacion tijere
@@ -139,13 +169,13 @@ $(document).ready(function (){
 
             
     /*if(contador_cpu == 3){
-        alert("Gana compu")
-        console.log("Juego finalizado");
+        alert("GANA LA COMPUTADORA")
+        console.log("JUEGO FINALIZADO");
         contador_cpu = 0;
         contador_jugador = 0;
      }else if(contador_jugador == 3){
         alert("Ganan jugador")
-        console.log("Juego finalizado");
+        console.log("JUEGO FINALIZADO");
         contador_cpu = 0;
         contador_jugador = 0;
      }
