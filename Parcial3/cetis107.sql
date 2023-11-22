@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-11-2023 a las 03:17:27
+-- Tiempo de generación: 22-11-2023 a las 03:30:14
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -71,7 +71,9 @@ INSERT INTO `alumno_materias` (`id`, `alumno_id`, `materia_id`) VALUES
 (1, 6, 1),
 (2, 6, 3),
 (3, 8, 3),
-(4, 8, 4);
+(4, 8, 4),
+(5, 1, 1),
+(6, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -132,7 +134,7 @@ ALTER TABLE `alumnos`
 -- AUTO_INCREMENT de la tabla `alumno_materias`
 --
 ALTER TABLE `alumno_materias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `materias`
