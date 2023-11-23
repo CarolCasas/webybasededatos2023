@@ -16,14 +16,14 @@
         $datos = $conexion->query($sql);
     ?>
 
-    <div class="container">
+    <div class="container"><br>
         <div class="row">
             <div class="col-12">
             <?php if($datos->num_rows > 0) { ?>
                 <?php while($registro = $datos->fetch_assoc()) { 
                     $id = $registro["id"];
                     $sql2 = "SELECT a.*, m.nombre AS materia_nombre FROM alumnos a INNER JOIN alumno_materias am ON a.id = am.alumno_id INNER JOIN 
-                    materias m ON a.id = am.materia_id WHERE a.id=".$id;
+                    materias m ON m.id = am.materia_id WHERE a.id=".$id;
                     $datos2 = $conexion->query($sql2);
                     ?>
                     <div class="card">
@@ -47,7 +47,6 @@
                 <h3>No existen alumnos en la base de datos</h3>
             <?php } ?>
             
-                
             </div>
         </div>
     </div>

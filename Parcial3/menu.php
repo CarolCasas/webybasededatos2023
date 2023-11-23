@@ -19,6 +19,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="inicio.php">Inicio</a></li>
             <li><a class="dropdown-item" href="consultarAlumnos.php">Consultar alumnos</a></li>
+            <li><a class="dropdown-item" href="ConsultarAlumnosMaterias.php">Consultar Alumnos - Materias</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="RegistrarAlumno.php">Registar alumno</a></li>
           </ul>
@@ -37,8 +38,6 @@
         </li>
       </ul>
       </ul>
-      
-      
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
         <button class="btn btn-outline-secondary" type="submit">Buscar</button>

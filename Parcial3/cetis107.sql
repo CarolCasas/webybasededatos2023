@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-11-2023 a las 03:30:14
+-- Tiempo de generación: 23-11-2023 a las 03:21:35
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -68,12 +68,21 @@ CREATE TABLE `alumno_materias` (
 --
 
 INSERT INTO `alumno_materias` (`id`, `alumno_id`, `materia_id`) VALUES
-(1, 6, 1),
-(2, 6, 3),
 (3, 8, 3),
 (4, 8, 4),
 (5, 1, 1),
-(6, 1, 3);
+(6, 1, 3),
+(9, 6, 1),
+(10, 6, 2),
+(11, 6, 3),
+(13, 2, 1),
+(14, 5, 2),
+(15, 3, 1),
+(16, 3, 2),
+(17, 3, 3),
+(18, 4, 2),
+(19, 4, 3),
+(20, 2, 5);
 
 -- --------------------------------------------------------
 
@@ -96,7 +105,9 @@ INSERT INTO `materias` (`id`, `nombre`, `semestre`, `especialidad`) VALUES
 (1, 'Ingles V', 5, 'PROGRAMACION'),
 (2, 'Calculo', 5, 'PROGRAMACION'),
 (3, 'Fisica', 5, 'CONSTRUCCION'),
-(4, 'Personas Morales', 5, 'CONTABILIDAD');
+(4, 'Personas Morales', 5, 'CONTABILIDAD'),
+(5, 'Desarrolla Paginas Web', 4, 'PROGRAMACION'),
+(6, 'Dibujo Tecnico', 6, 'ELECTRONICA');
 
 --
 -- Índices para tablas volcadas
@@ -134,13 +145,13 @@ ALTER TABLE `alumnos`
 -- AUTO_INCREMENT de la tabla `alumno_materias`
 --
 ALTER TABLE `alumno_materias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `materias`
 --
 ALTER TABLE `materias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

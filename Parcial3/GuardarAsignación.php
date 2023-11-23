@@ -12,7 +12,7 @@
         }
 
         if($conexion->multi_query($sql) === TRUE){
-            header("Location: inicio.php");
+            header("Location: ConsultarAlumnosMaterias.php");
             $conexion->close();
             exit;
         }else{ 
